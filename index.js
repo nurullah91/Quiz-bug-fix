@@ -47,7 +47,6 @@ startQuiz.addEventListener("click", () => {
 const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
   const data = await res.json();
-  console.log(data)
   quizData = data;
   displayQuiz(data);
 };
@@ -75,7 +74,9 @@ const displayQuiz = (data) => {
 };
 
 // EventListener for quiz submit button
-document.querySelector("#submit").addEventlistener("click", () => {
+document.querySelector('#submit').addEventListener('click', () =>{
+  console.log('submit button clicked')
+  console.log(answers.length)
   if (answers.length < 6) {
     return;
 }
