@@ -13,6 +13,12 @@ let quizContainer = document.querySelector("#quizContainer");
 let answersContainer = document.querySelector("#answersContainer");
 let displayResult = document.querySelector("#displayResult");
 
+
+// blog button EventListener
+document.querySelector('#blogBtn').addEventListener("click", () => {
+  window.location.href = "blogs.html";
+})
+
 // EventListener for quiz start button
 startQuiz.addEventListener("click", () => {
   let countDown = document.querySelector("#countDownContainer");
