@@ -46,7 +46,8 @@ startQuiz.addEventListener("click", () => {
 // All quiz data fetched from json
 const loadQuiz = async () => {
   const res = await fetch("./data/quiz.json");
-  const data = await res.json;
+  const data = await res.json();
+  console.log(data)
   quizData = data;
   displayQuiz(data);
 };
@@ -77,7 +78,7 @@ const displayQuiz = (data) => {
 document.querySelector("#submit").addEventlistener("click", () => {
   if (answers.length < 6) {
     return;
-  }
+}
   quizTimer(true);
   answersContainer.innerHTML = `<div class="my-4">
   <i class="fa-solid fa-fan animate-spin text-2xl text-green-600"></i>
